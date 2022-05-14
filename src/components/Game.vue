@@ -8,23 +8,21 @@ import Rock from './Rock.vue'
 
 <template>
   <div
-    class="mx-auto flex h-full max-w-2xl flex-col justify-between p-8 tablet:justify-start tablet:gap-28"
+    class="mx-auto flex h-full max-w-sm flex-col justify-between p-8 tablet:max-w-3xl tablet:justify-start"
   >
     <Header />
 
-    <main>
+    <main class="flex-grow py-20 tablet:px-36">
       <div
-        class="relative mx-auto h-52 w-52 bg-triangle bg-contain bg-center bg-no-repeat tablet:h-64 tablet:w-64"
+        class="flex h-full flex-col justify-between bg-[url(images/bg-triangle.svg)] bg-[length:180px] bg-center bg-no-repeat tablet:bg-[length:230px]"
       >
-        <Paper
-          class="absolute -left-10 -top-8 tablet:-left-16 tablet:-top-16"
-        />
-        <Scissors
-          class="absolute -right-10 -top-8 tablet:-right-16 tablet:-top-16"
-        />
-        <Rock
-          class="absolute left-1/2 -bottom-8 -translate-x-1/2 tablet:-bottom-12"
-        />
+        <div class="flex justify-between">
+          <Paper class="" />
+          <Scissors class="" />
+        </div>
+        <div class="flex justify-center">
+          <Rock class="" />
+        </div>
       </div>
     </main>
 

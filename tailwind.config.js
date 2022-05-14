@@ -26,20 +26,11 @@ module.exports = {
           darkest: '#9f1736',
         },
       },
-      boxShadow: {
-        top: '0 4px 0 0 rgba(0, 0, 0, 0.3) inset',
-        bottom: '0 4px 0 0 rgba(0, 0, 0, 0.3)',
-      },
-      backgroundImage: {
-        'gradient-scissors': 'radial-gradient(#ec9e0e, #eca922)',
-        triangle: 'url(images/bg-triangle.svg)',
-      },
       fontSize: {
         '2xs': '0.6rem',
       },
       borderWidth: {
         3: '3px',
-        10: '10px',
       },
     },
   },
