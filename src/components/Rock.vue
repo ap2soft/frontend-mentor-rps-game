@@ -6,7 +6,7 @@ import AbstractFigure from './AbstractFigure.vue'
   <AbstractFigure
     gradient-colors="from-rock to-rock-dark"
     shadow-colors="shadow-rock-darkest"
-    icon-path="/images/icon-rock.svg"
+    icon-path="./images/icon-rock.svg"
     alt-text="Rock"
   />
 </template>
