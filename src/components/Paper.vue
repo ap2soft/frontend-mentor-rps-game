@@ -1,9 +1,9 @@
 <script setup>
-import AbstractIcon from './AbstractIcon.vue'
+import AbstractFigure from './AbstractFigure.vue'
 </script>
 
 <template>
-  <AbstractIcon
+  <AbstractFigure
     gradient-colors="from-paper to-paper-dark"
     shadow-colors="shadow-paper-darkest"
     icon-path="/images/icon-paper.svg"

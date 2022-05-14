@@ -36,7 +36,7 @@ onMounted(async () => {
       <Paper v-if="userChoice === FIGURES.PAPER" />
       <Scissors v-if="userChoice === FIGURES.SCISSORS" />
       <Rock v-if="userChoice === FIGURES.ROCK" />
-      <span class="text-white uppercase text-sm font-bold tracking-widest">
+      <span class="text-sm font-bold uppercase tracking-widest text-white">
         You Picked
       </span>
     </div>
@@ -44,12 +44,13 @@ onMounted(async () => {
       <div
         v-if="!theHouseChoice"
         class="
-          w-28
           h-28
+          w-28
           rounded-full
           bg-gradient-to-b
           from-[#1a2946]
           to-[#192744]
+          tablet:h-40 tablet:w-40
         "
       ></div>
       <template v-else>
@@ -57,7 +58,7 @@ onMounted(async () => {
         <Scissors v-if="theHouseChoice === FIGURES.SCISSORS" />
         <Rock v-if="theHouseChoice === FIGURES.ROCK" />
       </template>
-      <span class="text-white uppercase text-sm font-bold tracking-widest">
+      <span class="text-sm font-bold uppercase tracking-widest text-white">
         The House Picked
       </span>
     </div>
