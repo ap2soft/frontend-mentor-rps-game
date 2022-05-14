@@ -3,16 +3,19 @@ import { ref } from 'vue'
 import { FIGURES_POWER, RESULTS } from '../constants'
 
 const props = defineProps(['userChoice', 'theHouseChoice'])
-const emit = defineEmits(['restart'])
+const emit = defineEmits(['restart', 'win', 'lose'])
 
 let result = ref()
 if (props.userChoice === props.theHouseChoice) {
   result.value === RESULTS.DRAW
 } else {
-  result.value =
-    FIGURES_POWER[props.userChoice].winsAgainst === props.theHouseChoice
-      ? RESULTS.WIN
-      : RESULTS.LOSE
+  if (FIGURES_POWER[props.userChoice].winsAgainst === props.theHouseChoice) {
+    result.value = RESULTS.WIN
+    emit('win')
+  } else {
+    result.value = RESULTS.LOSE
+    emit('lose')
+  }
 }
 </script>
 

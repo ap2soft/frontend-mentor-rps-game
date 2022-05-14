@@ -6,7 +6,9 @@ import StepOne from './StepOne.vue'
 import StepTwo from './StepTwo.vue'
 import Result from './Result.vue'
 import { FIGURES } from '../constants'
+import { getScore, incrementScore, decrementScore } from '../score'
 
+const score = ref(getScore())
 const userChoice = ref()
 const theHouseChoice = ref()
 const result = ref()
@@ -15,6 +17,14 @@ const handleRestart = () => {
   userChoice.value = null
   theHouseChoice.value = null
   result.value = null
+}
+const handleWin = () => {
+  incrementScore()
+  score.value = getScore()
+}
+const handleLose = () => {
+  decrementScore()
+  score.value = getScore()
 }
 </script>
 
@@ -31,7 +41,7 @@ const handleRestart = () => {
       tablet:max-w-3xl tablet:justify-start
     "
   >
-    <TheHeader />
+    <TheHeader :score="score" />
 
     <main class="flex-grow py-20 tablet:px-36">
       <StepOne v-if="!userChoice" @user-picked="userChoice = $event" />
@@ -46,6 +56,8 @@ const handleRestart = () => {
         :user-choice="userChoice"
         :the-house-choice="theHouseChoice"
         @restart="handleRestart"
+        @win="handleWin"
+        @lose="handleLose"
       />
     </main>
 

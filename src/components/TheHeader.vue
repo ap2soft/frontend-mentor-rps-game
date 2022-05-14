@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+const props = defineProps(['score'])
+</script>
 
 <template>
   <header
@@ -32,7 +34,10 @@
       >
         Score
       </span>
-      <span class="text-4xl font-bold text-dark tablet:text-6xl">12</span>
+      <span
+        class="text-4xl font-bold text-dark tablet:text-6xl"
+        v-text="score"
+      ></span>
     </div>
   </header>
 </template>
