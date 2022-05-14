@@ -1,9 +1,21 @@
 <script setup>
+import { ref } from '@vue/reactivity'
 import TheHeader from './TheHeader.vue'
 import TheRules from './TheRules.vue'
-import Paper from './Paper.vue'
-import Scissors from './Scissors.vue'
-import Rock from './Rock.vue'
+import StepOne from './StepOne.vue'
+import StepTwo from './StepTwo.vue'
+import Result from './Result.vue'
+import { FIGURES } from '../constants'
+
+const userChoice = ref()
+const theHouseChoice = ref()
+const result = ref()
+
+const handleRestart = () => {
+  userChoice.value = null
+  theHouseChoice.value = null
+  result.value = null
+}
 </script>
 
 <template>
@@ -22,26 +34,19 @@ import Rock from './Rock.vue'
     <TheHeader />
 
     <main class="flex-grow py-20 tablet:px-36">
-      <div
-        class="
-          flex
-          h-full
-          flex-col
-          justify-between
-          bg-[url(images/bg-triangle.svg)]
-          bg-[length:180px]
-          bg-center bg-no-repeat
-          tablet:bg-[length:230px]
-        "
-      >
-        <div class="flex justify-between">
-          <Paper />
-          <Scissors />
-        </div>
-        <div class="flex justify-center">
-          <Rock />
-        </div>
-      </div>
+      <StepOne v-if="!userChoice" @user-picked="userChoice = $event" />
+      <StepTwo
+        v-if="userChoice"
+        :user-choice="userChoice"
+        @the-house-picked="theHouseChoice = $event"
+      />
+      <Result
+        v-if="userChoice && theHouseChoice"
+        class="mt-8"
+        :user-choice="userChoice"
+        :the-house-choice="theHouseChoice"
+        @restart="handleRestart"
+      />
     </main>
 
     <TheRules class="tablet:absolute tablet:right-10 tablet:bottom-10" />
