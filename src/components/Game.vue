@@ -28,6 +28,6 @@ import Rock from './Rock.vue'
       </div>
     </main>
 
-    <Rules class="right-10 bottom-10 tablet:absolute" />
+    <Rules class="tablet:absolute tablet:right-10 tablet:bottom-10" />
   </div>
 </template>
