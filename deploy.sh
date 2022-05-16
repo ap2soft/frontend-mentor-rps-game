@@ -9,6 +9,9 @@ npm run build
 # navigate into the build output directory
 cd dist
 
+# remove old .git folder to fix `A branch named 'main' already exists.`
+rm -rf .git
+
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
 
