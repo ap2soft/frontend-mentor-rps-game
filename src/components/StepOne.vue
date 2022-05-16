@@ -14,8 +14,8 @@ const emit = defineEmits(['userPicked'])
       h-full
       flex-col
       justify-between
-      bg-[url(./images/bg-triangle.svg)]
-      bg-[length:180px]
+      bg-[url(./assets/images/bg-triangle.svg)]
+      bg-[length:220px]
       bg-center bg-no-repeat
       tablet:bg-[length:230px]
     "
