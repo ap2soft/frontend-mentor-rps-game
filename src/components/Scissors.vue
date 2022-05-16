@@ -4,9 +4,8 @@ import AbstractFigure from './AbstractFigure.vue'
 
 <template>
   <AbstractFigure
-    gradient-colors="from-scissors to-scissors-dark"
-    shadow-colors="shadow-scissors-darkest"
-    icon-path="./images/icon-scissors.svg"
-    alt-text="Scissors"
-  />
+    class="from-scissors to-scissors-dark shadow-scissors-darkest"
+  >
+    <img src="../assets/images/icon-scissors.svg" alt="Sciccors" />
+  </AbstractFigure>
 </template>

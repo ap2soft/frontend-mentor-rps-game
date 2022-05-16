@@ -1,10 +1,4 @@
 <script setup>
-const props = defineProps([
-  'gradientColors',
-  'shadowColors',
-  'iconPath',
-  'altText',
-])
 </script>
 
 <template>
@@ -20,7 +14,6 @@ const props = defineProps([
       focus:outline-none focus:ring-4 focus:ring-white/50
       tablet:h-40 tablet:w-40 tablet:p-5
     "
-    :class="`${gradientColors} ${shadowColors}`"
   >
     <div
       class="
@@ -40,7 +33,9 @@ const props = defineProps([
         tablet:p-2
       "
     >
-      <img :src="iconPath" :alt="altText" class="h-10 tablet:h-16" />
+      <div class="h-10 tablet:h-16">
+        <slot></slot>
+      </div>
     </div>
   </button>
 </template>

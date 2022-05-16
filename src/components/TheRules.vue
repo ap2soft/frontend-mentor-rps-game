@@ -83,7 +83,7 @@ const isOpen = ref(false)
               />
             </DialogTitle>
             <img
-              src="/images/image-rules.svg"
+              src="../assets/images/image-rules.svg"
               alt="Rules"
               class="py-10 tablet:pb-0"
             />

@@ -3,10 +3,7 @@ import AbstractFigure from './AbstractFigure.vue'
 </script>
 
 <template>
-  <AbstractFigure
-    gradient-colors="from-rock to-rock-dark"
-    shadow-colors="shadow-rock-darkest"
-    icon-path="./images/icon-rock.svg"
-    alt-text="Rock"
-  />
+  <AbstractFigure class="from-rock to-rock-dark shadow-rock-darkest">
+    <img src="../assets/images/icon-rock.svg" alt="Rock" />
+  </AbstractFigure>
 </template>

@@ -15,7 +15,7 @@ const props = defineProps(['score'])
     "
   >
     <div class="p-3">
-      <img src="/images/logo.svg" alt="Logo" class="h-12 tablet:h-24" />
+      <img src="../assets/images/logo.svg" alt="Logo" class="h-12 tablet:h-24" />
     </div>
     <div
       class="

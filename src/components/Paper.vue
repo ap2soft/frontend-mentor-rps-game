@@ -3,10 +3,7 @@ import AbstractFigure from './AbstractFigure.vue'
 </script>
 
 <template>
-  <AbstractFigure
-    gradient-colors="from-paper to-paper-dark"
-    shadow-colors="shadow-paper-darkest"
-    icon-path="./images/icon-paper.svg"
-    alt-text="Paper"
-  />
+  <AbstractFigure class="from-paper to-paper-dark shadow-paper-darkest">
+    <img src="../assets/images/icon-paper.svg" alt="Paper" />
+  </AbstractFigure>
 </template>
