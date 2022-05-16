@@ -47,7 +47,13 @@ const isOpen = ref(false)
 
       <div class="fixed inset-0 flex items-center justify-center">
         <DialogPanel
-          class="h-full w-full bg-white tablet:h-auto tablet:max-w-sm"
+          class="
+            h-full
+            w-full
+            bg-white
+            rounded-md
+            tablet:h-auto tablet:max-w-sm
+          "
         >
           <div
             class="
